@@ -1,9 +1,12 @@
-body {
+* {
     background-color: black;
     color: red;
+    margin: none;
+    padding: none;
+    scroll-behavior: smooth;
 }
 
-#homepage {
+#home {
     margin:auto;
     visibility: visible;
 }
