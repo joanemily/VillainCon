@@ -1,7 +1,36 @@
-#home {
+body {
     background-color: black;
+    color: red;
+}
+
+#homepage {
+    margin:auto;
+    visibility: visible;
 }
 #password {
-    margin: auto;
     color: red;
+}
+#error {
+    margin:auto;
+    visibility: hidden;
+}
+#rsvp {
+    margin:auto;
+    visibility: hidden;
+}
+#thankYou {
+    margin:auto;
+    visibility: hidden;
+}
+#villains {
+    margin:auto;
+    visibility: hidden;
+}
+#welcome {
+    margin:auto;
+    visibility: hidden;
+}
+#selfDestruct {
+    margin:auto;
+    visibility: hidden;
 }
