@@ -1,0 +1,25 @@
+{
+  "name": "VillainCon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "myscripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joanemily/VillainCon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joanemily/VillainCon/issues"
+  },
+  "homepage": "https://github.com/joanemily/VillainCon#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "json2csv": "^5.0.5",
+    "requirejs": "^2.3.6"
+  }
+}

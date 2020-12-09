@@ -1,4 +1,12 @@
-const villainList = [{name:'Carmen Sandiego', email:'joanemily@live.com'}]
+let villainList = [];
+const CSVtoJSON = require("csvtojson");
+const JSONtoCSV = require("json2csv").parse;
+const fileSystem = require("fs");
+const requireJS = require("requirejs");
+
+requirejs.config({
+    nodeRequire: require
+});
 
 const password = () => 
 {
@@ -21,6 +29,10 @@ const villains = () => {
     //hide the #details page and show the #villains page.
     document.getElementById("rsvp").style.visibility = 'hidden';
     document.getElementById("villains").style.visibility = 'visible';
+    //get villainList from csv file.
+    async () => {
+        villainList = await CSVtoJSON().fromFile("villains.csv");
+    }
     //iterate through villainList and display all the names of those who are currently registered to come.
     let ul = document.createElement('ul');
     document.getElementById("allAttending").appendChild(ul);
@@ -42,6 +54,9 @@ const saveVillain = () => {
     var villainEmail = document.getElementById("email").value;
     //push them to the villainList.
     villainList.push({name: villainName, email: villainEmail});
+    //save the new villains to csv.
+    const villainToCSV = new JSONtoCSV({fields: ["name", "email"]}).parse(villainList);
+    fileSystem.writeFileSync("villain.csv", villainToCSV);
     //hide the #villains page and show the #welcome page
     document.getElementById("villains").style.visibility = 'hidden';
     document.getElementById("welcome").style.visibility = 'visible';
