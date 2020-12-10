@@ -5,35 +5,112 @@
     padding: none;
     scroll-behavior: smooth;
 }
-
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "overlay";
+}
 #home {
-    margin:auto;
     visibility: visible;
+    text-align: center;
+    margin-top: 10em;
+    grid-area: overlay;
 }
 #password {
     color: red;
 }
 #error {
-    margin:auto;
     visibility: hidden;
+    text-align: center;
+    grid-area: overlay;
+    margin-top: 10em;
 }
 #rsvp {
-    margin:auto;
     visibility: hidden;
+    text-align: center;
+    grid-area: overlay;
+    margin-top: 10em;
+}
+input {
+    background: none;
+    border: 5px solid red;
+    border-radius: 2px;
+    width: 20em;
+    height: 2.5em;
+    outline: none;
+}
+input::placeholder{
+    color: red;
+    justify-self: center;
+}
+button {
+    margin: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 2px;
+    font: bold 30px 'Trebuchet Ms', helvetica;
+    letter-spacing: 4px;
+    text-decoration: none;
+    text-shadow: -1px -1px 1px #2e0000,1px 1px 1px #ffa1a1;
+    color: #6d1414;
+    background: -webkit-linear-gradient(linear, left top, left bottom, color-stop(0%,rgb(255, 114, 114)), color-stop(100%,rgb(238, 64, 64)));
+    background: linear-gradient(to bottom, rgb(255, 114, 114) 0%,rgb(238, 64, 64) 100%);    
+}
+button:hover {  
+    /* BUTTON SHADOW */
+   box-shadow: 0 6px 6px #510000, 0 6px 0 #510000, -1px 0px 0 #720000, 0px 0px 0 #720000, 0px 7px 8px #000, 0 7px 20px #1b1b1b;
+}
+.button:active {  
+    border-top: 1px solid #fccdcd;
+    /* BUTTON SHADOW */
+   box-shadow: 0 0px 0px #510000, 0 3px 0 #510000, 0px 0px 0 #720000, 0px 0px 0 #720000, 0px 2px 4px #000, 0 2px 10px #1b1b1b;
+}
+  /* ANIMATE THE BUTTON */
+.transition,
+.transition:hover,
+.transition:active{
+  -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.highlight {
+  position: relative;
+  margin: -200px auto 0 auto;
+  width: 500px;
+  height: 400px;
+  opacity: 0.4;
+background: -moz-radial-gradient(top, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+background: -webkit-linear-gradient(radial, top top, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+background: -webkit-radial-gradient(top, ellipse cover, rgba(255,255,255,0.3) 0px,rgba(255,255,255,0) 275px);
+}
+
+ul {
+    list-style-type: none;
 }
 #thankYou {
-    margin:auto;
     visibility: hidden;
+    text-align: center;
+    grid-area: overlay;
+    margin-top: 10em;
 }
 #villains {
-    margin:auto;
     visibility: hidden;
+    text-align: center;
+    grid-area: overlay;
+    margin-top: 10em;
 }
 #welcome {
-    margin:auto;
     visibility: hidden;
+    text-align: center;
+    grid-area: overlay;
+    margin-top: 10em;
 }
 #selfDestruct {
-    margin:auto;
     visibility: hidden;
+    text-align: center;
+    grid-area: overlay;
+    margin-top: 10em;
 }

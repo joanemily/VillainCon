@@ -5,14 +5,17 @@
 </head>
   
 <body>
+    <div class="grid">
 <div id="home">
     <input id="password" type="password" placeholder="password" />
-    <button onclick="password()">ENTER</button>
+    <button id="pwButton" onclick="password()">ENTER</button>
 </div>
 <div id="error">
     <h3>You are an imposter!</h3>
     <p>Did you think we would not notice? Either, you are a computer illiterate villain who needs one of his minions to take over or you have just done something you will regret.</p>
     <h4 id="title">This page will self-destruct in...<span class="timer">10</span> second(s)...</h4>
+</div>
+
 <div id="rsvp">
     <div id="details">
     <h3>Here are the event details:</h3>
@@ -35,7 +38,7 @@
 <div id="thankYou">
     <h3>Thank you for letting us know.</h3>
     <p>We wish you the vilest of New Years.</p>
-    <h4 id="title">This page will self-destruct in...<span id="errorTimer">10</span> second(s)...</h4>
+    <h4 id="title">This page will self-destruct in...<span class="timer">10</span> second(s)...</h4>
 </div>
 <div id="villains">
     <div id="villainList">
@@ -56,9 +59,11 @@
     <h4 id="title">This page will self-destruct in...<span class="timer">10</span> second(s)...</h4>
 </div>
 <div id="selfDestruct">
-
+    <img src="https://i.pinimg.com/originals/47/12/89/471289cde2490c80f60d5e85bcdfb6da.gif" alt="Explosion">
+</div>
 </div>
 </body>
 </html>
 
 <script src="myscripts.js" type="text/javascript"></script>
+

@@ -56,13 +56,14 @@ const saveVillain = () => {
 
 }
 
-var counterElement = document.getElementById("errorTimer");
+var counterElement = document.getElementsByClassName("timer");
 
 // Count down the counter until 0
 function decreaseCounter() {
 // Convert counter text to a number
     var counter = Number(counterElement.textContent);
-    counterElement.innerHTML = counter - 1;
+    counter -= 1;
+    counterElement.textContent = counter;
 
     if (counter <= 0) {
         doSomething();
@@ -73,5 +74,5 @@ function doSomething() {
     document.getElementById("error").style.visibility = 'hidden';
     document.getElementById("welcome").style.visibility = 'hidden';
     document.getElementById("thankYou").style.visibility = 'hidden';
-    document.getElementById("selfDestruct").style.visibility = 'visible';
+    document.getElementById("selfDestruct").style.visibility = 'hidden';
 }
