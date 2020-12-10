@@ -56,6 +56,8 @@ const saveVillain = () => {
 
 }
 
+
+
 var counterElement = document.getElementsByClassName("timer");
 
 // Count down the counter until 0
