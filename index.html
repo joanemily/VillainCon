@@ -2,7 +2,6 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="myscripts.js" type="text/javascript"></script>
 </head>
   
 <body>
@@ -13,8 +12,7 @@
 <div id="error">
     <h3>You are an imposter!</h3>
     <p>Did you think we would not notice? Either, you are a computer illiterate villain who needs one of his minions to take over or you have just done something you will regret.</p>
-    <h4 class="timer"></h4>
-</div>
+    <h4 id="title">This page will self-destruct in...<span class="timer">10</span> second(s)...</h4>
 <div id="rsvp">
     <div id="details">
     <h3>Here are the event details:</h3>
@@ -37,7 +35,7 @@
 <div id="thankYou">
     <h3>Thank you for letting us know.</h3>
     <p>We wish you the vilest of New Years.</p>
-    <h4 class="timer"></h4>
+    <h4 id="title">This page will self-destruct in...<span id="errorTimer">10</span> second(s)...</h4>
 </div>
 <div id="villains">
     <div id="villainList">
@@ -55,10 +53,12 @@
 <div id="welcome">
     <h3>You have successfully registered for this year's VillainCon.</h3>
     <p>You should be receiving your welccome packet via email shortly.</p>
-    <h4 class="timer"></h4>
+    <h4 id="title">This page will self-destruct in...<span class="timer">10</span> second(s)...</h4>
 </div>
 <div id="selfDestruct">
 
 </div>
 </body>
 </html>
+
+<script src="myscripts.js" type="text/javascript"></script>

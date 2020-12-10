@@ -11,7 +11,7 @@ if (pwValue != 'LifeIsVile2021' || pwValue == null) {
 //if incorrect, hide #home page and show #error page
 document.getElementById("home").style.visibility = 'hidden';
 document.getElementById("error").style.visibility = 'visible';
-countdown();
+setInterval(decreaseCounter, 1000);
 }
 else if (pwValue == 'LifeIsVile2021') {
 //if correct, hide #home page and show #details page
@@ -38,7 +38,7 @@ const thankYou = () => {
     //hide the #details page and show the #villains page.
     document.getElementById("rsvp").style.visibility = 'hidden';
     document.getElementById("thankYou").style.visibility = 'visible';
-    countdown();
+    setInterval(decreaseCounter, 1000);
 }
 
 const saveVillain = () => {
@@ -52,22 +52,21 @@ const saveVillain = () => {
     //hide the #villains page and show the #welcome page
     document.getElementById("villains").style.visibility = 'hidden';
     document.getElementById("welcome").style.visibility = 'visible';
-    countdown();
+    setInterval(decreaseCounter, 1000);
 
 }
 
-    let timeLeft = 30;
-    let timerId = setInterval(countdown, 1000);
+var counterElement = document.getElementById("errorTimer");
 
-function countdown() {
-    if (timeLeft == -1) {
-        clearTimeout(timerId);
+// Count down the counter until 0
+function decreaseCounter() {
+// Convert counter text to a number
+    var counter = Number(counterElement.textContent);
+    counterElement.innerHTML = counter - 1;
+
+    if (counter <= 0) {
         doSomething();
-    } else {
-        let elem = document.getElementsByClassName("timer");
-        elem.innerHTML = 'This message will self destruct in ' + timeLeft + ' sec';
-        timeLeft--;
-    }
+    } 
 }
 
 function doSomething() {
